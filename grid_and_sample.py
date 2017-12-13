@@ -99,14 +99,12 @@ def main():
         
         print("iteration: {}. this iter time: {}. total elapsed time: {}".format(i, 
                                                             round(time.time() - start_iter_time,2), round(time.time() - start_time,2)))
-        #print(sorted(X_train))
-        #print("")
+
+    
     
     X_train = np.append(X_train, X_test[np.array([new_point])], axis=0)
-    print(sorted(X_train))
+    return X_train
 
         
 if __name__ == "__main__":
-    #import cProfile
-    #cProfile.run('main()', sort='cumtime')
     main()
